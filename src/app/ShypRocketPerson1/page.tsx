@@ -18,7 +18,7 @@ import { AiFillLike } from "react-icons/ai";
 
 // AiFillLike BsBuildingsFill FaCalendar
 
-function page() {
+export default function Page() {
 
     const [next,setNext] = useState(false);
 
@@ -393,4 +393,3 @@ function page() {
   )
 }
 
-export default page

@@ -2,7 +2,7 @@ import React from 'react'
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaTruckArrowRight } from "react-icons/fa6";
 
-function page() {
+export default function Page() {
   return (
     <div className='min-h-screen p-4 bg-slate-200'>
         <p className='text-center md:text-left text-4xl font-bold'>Apps</p>
@@ -109,4 +109,3 @@ function page() {
   )
 }
 
-export default page
