@@ -23,7 +23,7 @@ export default function Page() {
     const [next,setNext] = useState(false);
 
   return (
-    <section className='w-screen mx-auto lg:w-[80%] p-6'>
+    <section className='w-screen mx-auto md:w-[80%] p-6'>
     <div className='flex justify-between'>
         <p className='text-xl font-semibold'>Brand Boost</p>
         <span className='text-sm text-indigo-800 bg-indigo-200 px-3 py-2 rounded-md'>Preview Tracking Page</span>
