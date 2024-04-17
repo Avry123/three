@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        'lg': '1550px',
+        'lg': '1250px',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
