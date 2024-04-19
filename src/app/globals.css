@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .blue {
-    @apply w-14 h-14 rounded-full bg-blue-500
+    @apply w-14 h-14 rounded-full bg-blue-500 text-center
 }
 
