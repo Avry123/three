@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 
 
 interface paramSchem {
@@ -9,12 +11,18 @@ interface propsSchema {
     searchParams: any;
 }
 
+export const generateMetadata = ({params} : propsSchema) : Metadata => {
+    return {
+        title: `Title MEtadata`
+    }
+}
+
 
 export default function Story({params}: propsSchema) {
     console.log(params);
     return (
         <div>
-            <h1>Hello This is [page]</h1>
+            <h1>Hello This is {params.no}</h1>
         </div>
     )
 }
