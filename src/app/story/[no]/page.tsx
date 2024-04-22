@@ -11,11 +11,10 @@ interface propsSchema {
     searchParams: any;
 }
 
-export const generateMetadata = ({params} : propsSchema) : Metadata => {
-    return {
-        title: `Title MEtadata`
-    }
-}
+export const metadata: Metadata = {
+    title: "Title Metadata",
+  };
+  
 
 
 export default function Story({params}: propsSchema) {
