@@ -22,7 +22,7 @@ export default async function Page() {
             </div>
         ))} */} 
         {data.map(({Title,Message},index) => (
-            <Card title={Title} message={Message} index={index} />
+            <Card key={index} title={Title} message={Message} index={index} />
         ))}
     </div>
   )
