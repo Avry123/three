@@ -21,3 +21,17 @@ export const handleSubmit = async (e: FormData) => {
 
   revalidateTag("TitleMessage");
 };
+
+interface dataSchem {
+  Title: string;
+  Message: string;
+  
+}
+
+export async function fetchData() : Promise<dataSchem[]> {
+  let res = await fetch('https://66112f5c95fdb62f24ecab0d.mockapi.io/TitleMessage')
+  let data : dataSchem[] = await res.json()
+  return data
+}
+
+ 

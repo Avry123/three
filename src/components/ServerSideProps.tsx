@@ -1,5 +1,7 @@
-import React from 'react'
+
+import React, {useEffect, useState} from 'react'
 import Card from './Card'
+import { fetchData } from '../../actions/serverActions';
 
 // ServerSideProps.tsx
 interface dataSchem {
@@ -8,11 +10,18 @@ interface dataSchem {
   
 }
 
-export default async function Page() {
+export default  function Page() {
 
-  let res = await fetch('https://66112f5c95fdb62f24ecab0d.mockapi.io/TitleMessage')
-  let data : dataSchem[] = await res.json()
+let [data,setData] = useState<dataSchem[]>([])
 
+useEffect(() => {
+  const fetchDataUsingMethod =  async () : Promise<dataSchem[]> => {
+    let data = await fetchData()
+    return data
+  }
+  let dataFetched = fetchDataUsingMethod() 
+  dataFetched.then((data : dataSchem[]) =>  setData(data))
+}, [])
 
 return (
   <div className='p-6 flex flex-col gap-4 justify-center items-center max-h-full overflow-y-auto'>

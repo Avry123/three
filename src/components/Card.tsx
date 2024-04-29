@@ -8,6 +8,7 @@ export default function Page({ title, message } : {title: string, message: strin
   // Initialize the Redux dispatch function
   let dispatch = useDispatch();
 
+ 
 
   
 
